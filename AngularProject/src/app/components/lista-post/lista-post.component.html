@@ -1,0 +1,15 @@
+<div class="btn">
+  <button (click)="filterByCategoria('categoria1')">Romance</button>
+  <button (click)="filterByCategoria('categoria2')">Ficción y fantasía</button>
+  <button (click)="filterByCategoria('')">Todos</button>
+  <button (click)="navigateToNewPost()">Nuevo</button>
+</div>
+
+<div *ngFor="let post of posts">
+  <h2>{{ post.titulo }}</h2>
+  <p>{{ post.texto }}</p>
+  <p><strong>Autor:</strong> {{ post.autor }}</p>
+  <img *ngIf="post.srcImagen" [src]="post.srcImagen" alt="{{ post.titulo }}">
+  <p><strong>Fecha:</strong> {{ post.fecha | date }}</p>
+  <p><strong>Categoría:</strong> {{ post.cat }}</p>
+</div>

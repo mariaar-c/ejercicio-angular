@@ -1,0 +1,54 @@
+<form (ngSubmit)="submitPost()">
+  <label for="titulo">Título:</label>
+  <input
+    id="titulo"
+    type="text"
+    [(ngModel)]="post.titulo"
+    name="titulo"
+    required
+  />
+
+  <label for="texto">Texto:</label>
+  <textarea
+    id="texto"
+    [(ngModel)]="post.texto"
+    name="texto"
+    required
+  ></textarea>
+
+  <label for="autor">Autor:</label>
+  <input
+    id="autor"
+    type="text"
+    [(ngModel)]="post.autor"
+    name="autor"
+    required
+  />
+
+  <label for="srcImagen">URL de la Imagen:</label>
+  <input
+    id="srcImagen"
+    type="text"
+    [(ngModel)]="post.srcImagen"
+    name="srcImagen"
+  />
+
+  <label for="fecha">Fecha:</label>
+  <input
+    id="fecha"
+    type="date"
+    [(ngModel)]="post.fecha"
+    name="fecha"
+    required
+  />
+
+  <label for="cat" class="categ">Categoría:</label>
+  <select id="cat" [(ngModel)]="post.cat" name="cat" required>
+    <option value="" disabled selected>Selecciona una categoría</option>
+    <option value="tecnologia">Romance</option>
+    <option value="ciencia">Ficción y fantasía</option>
+  </select>
+
+  <button type="submit">Publicar</button>
+  <button type="reset" (click)="resetForm()">Limpiar</button>
+</form>

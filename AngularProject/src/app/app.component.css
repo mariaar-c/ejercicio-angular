@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Lovely-Valentine";
+  src: url("./fonts/Lovely-ValentineScript.ttf");
+}
+
+h1 {
+  font-family: "Lovely-Valentine";
+  color: rgb(250, 170, 203);
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  
+}
+
